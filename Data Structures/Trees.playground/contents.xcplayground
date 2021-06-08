@@ -5,5 +5,6 @@
         <page name='Leetcode 429 - Nary Tree LVL order traversal'/>
         <page name='Leetcode 103 - BinaryTree bottom up LVL order'/>
         <page name='Leetcode 199 - Rightside view of a tree'/>
+        <page name='Leetcode 100 - Zigzag LVL order traversal'/>
     </pages>
 </playground>
