@@ -6,6 +6,8 @@ import Foundation
  
  Level order traversal is just another word for Breadth First Search (BFS)
  - we traversal the tree from the root from left to right
+ 
+ the below code is the template for BFS for trees
  **/
 
 
@@ -30,6 +32,13 @@ import Foundation
 //
 //}
 
+
+/*
+ below we are modifying the template to create the inner lists for each LVL of the tree.
+ -  if given a tree in the form of an array how would we create the tree?
+ 
+ - space and time for the below is O(n)
+ **/
 
 func LVLOrder(root: BinaryNode<Int>) -> [[Int]] {
     var q = QueueArray<BinaryNode<Int>>()
