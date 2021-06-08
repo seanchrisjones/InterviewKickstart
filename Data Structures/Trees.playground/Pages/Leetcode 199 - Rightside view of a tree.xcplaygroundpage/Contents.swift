@@ -44,6 +44,7 @@ func rightSideView(root: BinaryNode<Int>) -> [[Int]] {
  - In theory, we would just return the last element of the temp array because it is the right most element of that LVL
  - we need to create a new variable called new temp  by dropping all but the last element from the temp array.
  - This will create an array slice so we have to typecast it as an array for it to fit into our result.
+ - BEWARE of the edge case where temp will only have one node 
  
  **/
 
