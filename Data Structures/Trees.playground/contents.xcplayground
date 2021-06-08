@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='macos' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='Leetcode 102 - Level Order Traversal'/>
-        <page name='Leetcode 429 - Nary Tree LVL order traversal'/>
-        <page name='Leetcode 103 - BinaryTree bottom up LVL order'/>
-        <page name='Leetcode 199 - Rightside view of a tree'/>
-        <page name='Leetcode 100 - Zigzag LVL order traversal'/>
+        <page name='Leetcode 102 - Level Order Traversal(BFS)'/>
+        <page name='Leetcode 429 - Nary Tree LVL order traversal(BFS)'/>
+        <page name='Leetcode 103 - BinaryTree bottom up LVL order(BFS)'/>
+        <page name='Leetcode 199 - Rightside view of a tree(BFS)'/>
+        <page name='Leetcode 100 - Zigzag LVL order traversal(BFS)'/>
+        <page name='DFS template'/>
+        <page name='Leetcode 112 - Path Sum (DFS)'/>
     </pages>
 </playground>
