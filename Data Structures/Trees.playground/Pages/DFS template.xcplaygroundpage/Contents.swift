@@ -8,7 +8,8 @@ import Foundation
   - DFS is done recursively
   - We take the lazy manager approach for DFS
   - If there are left/Right children for the node we're passing we recurively call the DFS function on the child nodes
-  - in DFS if a node has two children it is the left children node that wil be processed 3first
+  - in DFS if a node has two children it is the left children node that wil be processed first
+  - the Space complexity of DFS is the height of the tree
  **/
 
 
