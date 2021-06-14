@@ -8,5 +8,6 @@
         <page name='Leetcode 100 - Zigzag LVL order traversal(BFS)'/>
         <page name='DFS template'/>
         <page name='Leetcode 112 - Path Sum (DFS)'/>
+        <page name='Leetcode 113 - Path Sum 2 (DFS)'/>
     </pages>
 </playground>
