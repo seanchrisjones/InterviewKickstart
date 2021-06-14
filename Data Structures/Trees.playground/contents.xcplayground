@@ -9,5 +9,6 @@
         <page name='DFS template'/>
         <page name='Leetcode 112 - Path Sum (DFS)'/>
         <page name='Leetcode 113 - Path Sum 2 (DFS)'/>
+        <page name='Leetcode 543 - Diameter of a Binary Tree (DFS)'/>
     </pages>
 </playground>
