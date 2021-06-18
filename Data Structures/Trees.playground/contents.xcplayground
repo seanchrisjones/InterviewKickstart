@@ -11,5 +11,6 @@
         <page name='Leetcode 113 - Path Sum 2 (DFS)'/>
         <page name='Leetcode 543 - Diameter of a Binary Tree (DFS)'/>
         <page name='Leetcode 250 - Count Unival Subtrees'/>
+        <page name='Leetcode 1008 - Construct Binary Tree from Preorder Traversal'/>
     </pages>
 </playground>
