@@ -52,10 +52,11 @@ import Foundation
 
 func driver( nums: [Int]){
    var tree = BinarySearchTree<Int>()
-    for i in nums {
+    for i in 0...nums.count-1 {
         tree.insert(nums[i])
     }
-    print("hello")
+    print(tree)
+    
 }
 
 //: [Next](@next)

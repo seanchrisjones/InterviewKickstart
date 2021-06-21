@@ -27,7 +27,7 @@ import Foundation
 
 
 //: [Next](@next)
-
+/*CLASS SOLUTION
 
 func dfs(node: BinaryNode<Int>, globalCount: inout Int) -> Bool {
     
@@ -69,5 +69,38 @@ func countUnivalSubtrees(root: BinaryNode<Int>) {
     var globalCount = 0
     dfs(node: root, globalCount: &globalCount)
     return globalCount
+ 
+ **/
+
+
+
+//SWIFT SOLUTION
+
+func countUnivalSubtrees(_ root: BinaryNode<Int>?) -> Int {
+    var count = 0
+    isValid(root, count: &count)
+    return count
     
 }
+
+func isValid(_ node: BinaryNode<Int>?, count: inout Int) -> Bool {
+    guard let node = node else {return true} // leaf node: all leaf nodes are considered to be valid  unival sub trees
+    
+    let leftRes = isValid(node.leftChild, count: &count)
+    let rightRes = isValid(node.rightChild, count: &count)
+    
+    if let left = node.leftchild, left.value != node.value {
+        return false
+    }
+    
+    if let right = node.rightChild, right.value != node.value {
+        return false
+    }
+    
+    if leftRes, rightRes {
+        count+=1
+    }
+    return leftRes && rightRes
+}
+
+countUnivalSubtrees([5,1,5,5,5,nil,5])
