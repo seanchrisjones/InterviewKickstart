@@ -29,9 +29,15 @@ func dfs(node: BinaryNode<Int>) {
         dfs(node: node.leftChild!)
     }
     if node.rightChild != nil {
-        dfs(node: node.rightChild)
+        dfs(node: node.rightChild!)
     }
     
 }
+
+var root = BinaryNode<Int>(value: 1)
+root.leftChild = BinaryNode<Int>(value: 2)
+root.rightChild = BinaryNode<Int>(value: 3)
+
+driver(root: root)
 
 //: [Next](@next)
