@@ -19,49 +19,47 @@ root.right_ptr = TreeNode(val: 300)
 root.left_ptr?.left_ptr = TreeNode(val:400)
 root.left_ptr?.right_ptr = TreeNode(val: 500)
 
-var parentStack = Stack<TreeNode>()
-var leftStack = Stack<TreeNode>()
-var rightStack = Stack<TreeNode>()
-var result = [Int]()
+
 
 func postOrder(root: TreeNode) -> [Int]? {
-    guard let root = root else { return nil}
-    
-    if root.left_ptr == nil && root.right_ptr == nil {
-        result.append(root.val)
-        if let parent = parentStack.peek {
-            if let right = parent.right_ptr {
-                rightStack.push(right)
-                leftCheck(node: right)
-            }
-        }
-    } else {
-        parentStack.push(root)
-        
-        if let left = root.left_ptr {
-            leftStack.push(left)
-            leftCheck(node: left)
-        }
-        
-        if let right = root.right_ptr {
-            
-        }
-        
-        
+    print("hello")
+    var stack = Stack<TreeNode>()
+    var result = [Int]()
+    guard let root = root else {
+        return result
     }
+    stack.push(root)
+    var prev:TreeNode? = nil
+    
+    repeat {
+        var current: TreeNode? = stack.peek()
+        
+        if prev == nil || prev!.left_ptr == current || prev!.right_ptr == current {
+            if current?.left_ptr != nil {
+                stack.push(current!.left_ptr!)
+            } else if current!.right_ptr != nil {
+                stack.push(current!.right_ptr!)
+            } else {
+                stack.pop()
+                result.append(current!.val)
+            }
+        } else if current!.left_ptr! == prev {
+            if current!.right_ptr != nil {
+                stack.push(current!.right_ptr!)
+            } else {
+                stack.pop()
+                result.append(current!.val)
+            }
+        } else if current!.right_ptr == prev {
+            stack.pop()
+            result.append(current!.val)
+        }
+        prev = current
+    } while stack.storage.count != 0
+    return result
 }
 
-func leftCheck(node: TreeNode) {
-    guard let node = node else { return }
-    if let left  = node.left_ptr {
-        parentStack.push(node)
-        leftStack.push(left)
-        postorder(root:left)
-    }
-    
-    
-    
-}
+postorder(root:root)
 
 
 
