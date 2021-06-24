@@ -32,53 +32,34 @@ var globalBox = [[Int]]()
 func allPathsOfABinaryTree(root: TreeNode?) -> [[Int]]{
     guard let root = root else {return globalBox}
     var slate = [Int]()
-    var pathLength = 0
-    dfs(node:root, slate: &slate, pathLength: &pathLength)
+  
+    dfs(node:root, slate: &slate)
     print(globalBox)
     return globalBox
     
 }
 
-func dfs(node: TreeNode, slate: inout [Int], pathLength: inout Int) {
+func dfs(node: TreeNode?, slate: inout [Int]) {
     //print(pathLength)
+    guard let node = node else {return}
 
+    var currentSlate = slate
+    currentSlate.append(node.val)
     
-    
-if node.left_ptr == nil && node.right_ptr == nil {
-        globalBox.append(slate)
-        
+    if node.left_ptr == nil && node.right_ptr == nil {
+        globalBox.append(currentSlate)
     }
     
-        if let left = node.left_ptr {
-            //pathLength += 1
-            print("Going left: \(left.val) slate: \(slate) Pathlenth: \(pathLength)")
-            goLeft(node: left, slate: &slate, pathLength: &pathLength)
-            
-        }
-        
-        if let right = node.right_ptr{
-            //pathLength += 1
-            print("Going Right: \(right.val) slate: \(slate) Pathlenth: \(pathLength)")
-            goRight(node: right, slate: &slate, pathLength: &pathLength)
-           
-        }
+    if let left = node.left_ptr{
+    dfs(node: left, slate: &currentSlate)
+    }
+    if let right = node.right_ptr{
+    dfs(node: right, slate: &currentSlate)
+    }
+    
+}
  
-    
-   
-    
-}
 
-func goLeft(node: TreeNode, slate: inout [Int], pathLength: inout Int) {
-    pathLength += 1
-    dfs(node: node, slate: &slate, pathLength: &pathLength)
-    
-}
-
-func goRight(node: TreeNode, slate: inout [Int], pathLength: inout Int) {
-    pathLength += 1
-    dfs(node: node, slate: &slate, pathLength: &pathLength)
-    
-}
 
 allPathsOfABinaryTree(root: root)
 
