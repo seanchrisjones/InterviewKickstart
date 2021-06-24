@@ -56,7 +56,8 @@ func dfs(node: TreeNode?, root: TreeNode, slate: inout[Bool]) {
    
     
     if parent.left_ptr == nil && parent.right_ptr == nil {
-        globalBox.append(slate)
+        //globalBox.append(slate)
+        // only append to the global box if the case is false this will save on aux space
         return
     }
     
