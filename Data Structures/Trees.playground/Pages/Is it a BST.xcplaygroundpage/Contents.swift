@@ -61,7 +61,7 @@ func dfs(node: TreeNode?, root: TreeNode, slate: inout[Bool]) {
     }
     
     if let left = parent.left_ptr{
-        
+       
         //left-Left case:
         if parent.val <= root.val {
             if left.val <= parent.val && left.val <= root.val{
@@ -76,7 +76,7 @@ func dfs(node: TreeNode?, root: TreeNode, slate: inout[Bool]) {
             }
         } else if parent.val >= root.val {
             //left-Right case:
-            if left.val <= parent.val && left.val > root.val {
+            if left.val <= parent.val && left.val >= root.val {
                 slate.append(true)
                 dfs(node: left, root: root, slate: &slate)
             } else {
@@ -89,8 +89,10 @@ func dfs(node: TreeNode?, root: TreeNode, slate: inout[Bool]) {
     }
     
     if let right = parent.right_ptr {
+       
+        
         if parent.val >= root.val {
-            if right.val >= parent.val && right.val > root.val {
+            if right.val >= parent.val && right.val >= root.val {
                 slate.append(true)
                 dfs(node: right, root: root, slate: &slate)
             } else {
@@ -100,7 +102,7 @@ func dfs(node: TreeNode?, root: TreeNode, slate: inout[Bool]) {
                 
             }
         } else if parent.val <= root.val {
-            if right.val >= parent.val && right.val < root.val {
+            if right.val >= parent.val && right.val <= root.val {
                 slate.append(true)
                 dfs(node: right, root: root, slate: &slate)
             } else {
@@ -114,8 +116,11 @@ func dfs(node: TreeNode?, root: TreeNode, slate: inout[Bool]) {
   
 }
 
-isBST(root: bstRoot)
+var univalRoot = TreeNode(val: 1)
+univalRoot.left_ptr = TreeNode(val: 1)
+univalRoot.right_ptr = TreeNode(val: 1)
 
+isBST(root: univalRoot)
 
 
 //: [Next](@next)
