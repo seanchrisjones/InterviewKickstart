@@ -17,5 +17,6 @@
         <page name='Postorder traverssal without recursion 2'/>
         <page name='Print all Paths of a tree'/>
         <page name='Is it a BST'/>
+        <page name='UpsideDown'/>
     </pages>
 </playground>
