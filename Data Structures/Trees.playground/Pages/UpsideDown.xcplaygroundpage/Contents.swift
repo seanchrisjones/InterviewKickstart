@@ -29,7 +29,22 @@ root.left_ptr?.right_ptr = TreeNode(val: 500)
 root.left_ptr?.left_ptr?.left_ptr = TreeNode(val: 600)
 root.left_ptr?.left_ptr?.right_ptr = TreeNode(val: 700)
 
-var result = [Int]()
 
+func flipUpsideDown(root: TreeNode?) -> TreeNode? {
+    guard let root = root else { return nil}
+    
+    if root == nil || root.left_ptr == nil {
+        return root
+    }
+    
+    var newRoot = flipUpsideDown(root: root.left_ptr)
+    root.left_ptr?.left_ptr = root.right_ptr
+    root.left_ptr?.right_ptr = root
+    root.left_ptr = nil
+    root.right_ptr = nil
+    return newRoot
+}
+
+flipUpsideDown(root: root)
 
 //: [Next](@next)
