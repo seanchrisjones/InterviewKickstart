@@ -18,5 +18,6 @@
         <page name='Print all Paths of a tree'/>
         <page name='Is it a BST'/>
         <page name='UpsideDown'/>
+        <page name='Merge Two BSTs'/>
     </pages>
 </playground>
