@@ -19,5 +19,6 @@
         <page name='Is it a BST'/>
         <page name='UpsideDown'/>
         <page name='Merge Two BSTs'/>
+        <page name='Height of a K-ary Tree'/>
     </pages>
 </playground>
