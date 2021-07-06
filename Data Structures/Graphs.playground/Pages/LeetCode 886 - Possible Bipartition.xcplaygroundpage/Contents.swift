@@ -10,4 +10,8 @@ import Foundation
  
  **/
 
+func possibleBipartition(_n : Int, _ dislikes: [[Int]]) -> Bool {
+    
+}
+
 //: [Next](@next)
