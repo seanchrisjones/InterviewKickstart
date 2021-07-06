@@ -2,6 +2,6 @@
 <playground version='6.0' target-platform='macos' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='LeetCode 323 - Number of Connected Components in an Undirected Graph'/>
-        <page name='Untitled Page'/>
+        <page name='LeetCode 261 - Graph Valid Tree'/>
     </pages>
 </playground>

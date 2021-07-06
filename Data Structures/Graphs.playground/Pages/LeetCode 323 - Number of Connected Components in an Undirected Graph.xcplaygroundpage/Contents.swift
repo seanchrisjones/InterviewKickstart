@@ -90,4 +90,33 @@ func DFS(source: Int, adjList:[[Int]], visited: inout [Bool]) {
 
 countComponents(5, [[0,1],[1,2],[2,3],[3,4]])
 
+/*
+ Time and Space complexity analysis
+ 
+ BFS
+ 
+ Time:
+    O(n) - push/pop vertices from queue
+    O(degree(u)) - to check all the neighbors of a vertex
+    Because this is an undirected graph each edge is counted twice = 2m = O(m)
+ 
+  T = O(m+n)
+ 
+ Space:
+ 
+ AdjList = O(m + n)
+ Queue = O(n)
+ 
+ DFS:
+ 
+ Time:
+    O(n) = push/pop vertices
+    O(degree m) = looking at adjlis of each vertex
+ 
+    Aux Space:
+    O(n) = size of the call stack 
+ 
+ 
+ **/
+
 //: [Next](@next)
