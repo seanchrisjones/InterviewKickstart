@@ -3,5 +3,7 @@
     <pages>
         <page name='LeetCode 323 - Number of Connected Components in an Undirected Graph'/>
         <page name='LeetCode 261 - Graph Valid Tree'/>
+        <page name='LeetCode 785 - Is Graph Bipartite'/>
+        <page name='LeetCode 886 - Possible Bipartition'/>
     </pages>
 </playground>

@@ -67,7 +67,7 @@ func BFS(source: Int, adjList: [[Int]], visited: inout [Bool], parents: inout [I
     return false
 }
 
-
+// In DFS we are looking for Back Edges to detect a cycle
 func DFS(source: Int, adjList: [[Int]], visited: inout [Bool], parents: inout [Int]) -> Bool {
     visited[source] = true
     for neighbor in adjList[source] {
