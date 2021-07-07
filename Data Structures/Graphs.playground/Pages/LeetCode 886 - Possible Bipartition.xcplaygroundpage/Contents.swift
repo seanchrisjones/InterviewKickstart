@@ -46,7 +46,7 @@ func BFS(_ node: Int, _ graph: [[Int]], _ visited: inout [Int]) -> Bool {
         for child in graph[item] {
             if visited[child] == 0 {
                 visited[child] = visited[item] == 1 ? 2 : 1
-                print(visited[child] = visited[item] == 1 ? 2 : 1)
+                print(visited[child])
                 q.append(child)
             } else {
                 if visited[child] == visited[item] {
