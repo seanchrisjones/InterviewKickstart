@@ -2,18 +2,26 @@
 
 import Foundation
 
-func DFS(node: Int, visited:inout  [Int], adjList: [[Int]], arrival: inout [[Int]], departure: inout [[Int]], timeStamp: inout Int) {
+func DFS(node: Int, visited:inout  [Int], adjList: [[Int]], arrival: inout [[Int]], departure: inout [[Int]], timeStamp: inout Int) -> Bool{
     arrival[node] = timeStamp
     timeStamp += 1
     visited[node] = 1
     for neighbor in adjList[node] {
         if  visited[neighbor] == -1 {
-            departure[node] = timeStamp
-            DFS(node: node, visited: &visited, adjList: adjList, arrival: &arrival, departure: &departure, timeStamp: &timeStamp)
+            
+            if DFS(node: node, visited: &visited, adjList: adjList, arrival: &arrival, departure: &departure, timeStamp: &timeStamp) == true {
+                return true
+            }
+        } else {
+            // neighbor is already visited
+            if departure[neighbor] == -1 {
+                // there is a cycle
+            }
         }
         
     }
-    departure[node] = timeStamp
+    departure[node] = timeStamp+= 1
+    return false
 }
 
 /*
