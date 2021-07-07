@@ -8,5 +8,7 @@
         <page name='LeetCode 200 - Number of Islands'/>
         <page name='Snakes and ladders (directed)'/>
         <page name='Detecting Cycles in a Directed Graph'/>
+        <page name='LeetCode 207 - Course Schedule'/>
+        <page name='Leetcode 210 - Course Schedule II'/>
     </pages>
 </playground>

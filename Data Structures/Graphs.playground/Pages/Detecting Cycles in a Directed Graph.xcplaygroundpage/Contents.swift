@@ -2,7 +2,7 @@
 
 import Foundation
 
-func DFS(node: Int, visited:inout  [Int], adjList: [[Int]], arrival: inout [[Int]], departure: inout [[Int]], timeStamp: inout Int) -> Bool{
+func DFS(node: Int, visited:inout  [Int], adjList: [[Int]], arrival: inout [Int], departure: inout [Int], timeStamp: inout Int) -> Bool{
     arrival[node] = timeStamp
     timeStamp += 1
     visited[node] = 1
@@ -20,7 +20,7 @@ func DFS(node: Int, visited:inout  [Int], adjList: [[Int]], arrival: inout [[Int
         }
         
     }
-    departure[node] = timeStamp+= 1
+    departure[node] = timeStamp+1
     return false
 }
 
