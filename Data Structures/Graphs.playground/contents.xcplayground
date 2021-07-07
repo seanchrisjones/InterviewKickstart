@@ -6,5 +6,7 @@
         <page name='LeetCode 785 - Is Graph Bipartite'/>
         <page name='LeetCode 886 - Possible Bipartition'/>
         <page name='LeetCode 200 - Number of Islands'/>
+        <page name='Snakes and ladders (directed)'/>
+        <page name='Detecting Cycles in a Directed Graph'/>
     </pages>
 </playground>
