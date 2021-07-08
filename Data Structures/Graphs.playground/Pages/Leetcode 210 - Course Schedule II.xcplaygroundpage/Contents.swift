@@ -22,7 +22,7 @@ func findOrder(numCourses: Int, prerequisites: [[Int]]) -> [Int] {
             }
         }
     }
-    topSort.reverse()
+    //topSort.reverse()
     return topSort
 }
 
@@ -46,7 +46,7 @@ func DFS(node: Int, visited:inout  [Int], adjList: [Int: [Int]], arrival: inout 
         }
     }
     departure[node] = timeStamp+1
-    //print(departure)
+   //print(departure)
     topSort.append(node)
     //for part 2 create an Array to store the courses
     return false

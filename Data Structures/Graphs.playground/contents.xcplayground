@@ -10,5 +10,7 @@
         <page name='Detecting Cycles in a Directed Graph'/>
         <page name='LeetCode 207 - Course Schedule'/>
         <page name='Leetcode 210 - Course Schedule II'/>
+        <page name='LeetCode 1192 - Critical Connections'/>
+        <page name='Flood Fill'/>
     </pages>
 </playground>
