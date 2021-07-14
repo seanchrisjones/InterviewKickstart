@@ -14,5 +14,6 @@
         <page name='Flood Fill'/>
         <page name='KNights tour on A Chess Board'/>
         <page name='Zombie Clusters'/>
+        <page name='Critical Connections'/>
     </pages>
 </playground>
