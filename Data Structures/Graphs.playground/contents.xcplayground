@@ -16,5 +16,6 @@
         <page name='Zombie Clusters'/>
         <page name='Critical Connections'/>
         <page name='Reverse Graph'/>
+        <page name='Test-Alien Dictionary'/>
     </pages>
 </playground>
