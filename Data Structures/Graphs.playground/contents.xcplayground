@@ -15,5 +15,6 @@
         <page name='KNights tour on A Chess Board'/>
         <page name='Zombie Clusters'/>
         <page name='Critical Connections'/>
+        <page name='Reverse Graph'/>
     </pages>
 </playground>
