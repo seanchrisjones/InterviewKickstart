@@ -49,7 +49,7 @@ func findOrder(_ words: [String])  -> String{
         for k in 0..<len {
             var char1 = string1[string1.index(string1.startIndex, offsetBy: k)]
             var char2 = string2[string2.index(string2.startIndex, offsetBy: k)]
-            print("Char1: \(char1) Char2: \(char2)")
+            //print("Char1: \(char1) Char2: \(char2)")
             if char1 != char2 {
                 map[char1]?.append(char2)
                 inDegree[char2]! += 1
@@ -62,7 +62,7 @@ func findOrder(_ words: [String])  -> String{
 }
 
 func BFS( _ graph: [Character: [Character]], _ inDegrees: inout [Character: Int]) -> String {
-    print("in BFS")
+    //print("in BFS")
     var queue = [Character]()
     var resultString = ""
     for char in graph.keys {
@@ -72,7 +72,7 @@ func BFS( _ graph: [Character: [Character]], _ inDegrees: inout [Character: Int]
     }
     while !queue.isEmpty {
         var currentChar = queue.removeFirst()
-        print(currentChar)
+        //print(currentChar)
         resultString = resultString + String(currentChar)
         for child in graph[currentChar]! {
             inDegrees[child]! -= 1
@@ -85,5 +85,10 @@ func BFS( _ graph: [Character: [Character]], _ inDegrees: inout [Character: Int]
 }
 
 findOrder(["AABCDB","AACCD", "BADCC", "BBCD","CAB", "DBA"])
+
+// time complexity: O(2* number of chars) building the graph
+    // O( number of chard + number of words)
+
+// Space Complexity: 0(number of chars)
 
 //: [Next](@next)
