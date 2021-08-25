@@ -4,5 +4,6 @@
         <page name='TopDownMemoization'/>
         <page name='BottomUpTabulation'/>
         <page name='ClimbingNstairs'/>
+        <page name='CountingSubsetsOfK'/>
     </pages>
 </playground>
